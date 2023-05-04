@@ -1,0 +1,14 @@
+syntax = "proto2";
+package ru.talkingfox.grpcO;
+
+message Request {
+  required string query = 1;
+}
+
+message Response {
+  required string msg = 1;
+}
+
+service HelloWorldService {
+  rpc Get(Request) returns (Response);
+}
